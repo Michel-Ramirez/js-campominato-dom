@@ -28,7 +28,10 @@ button.addEventListener ('click', function (){
 
 
     const totalCells = level.value * level.value
-
+    
+    //punteggio
+    let score = 0;
+    
     //Creo un ciclo per creare e stampare le celle nel dom
     for (let i = 0; i < totalCells; i++){
 
@@ -42,24 +45,22 @@ button.addEventListener ('click', function (){
         cell.innerText = number
         
         
-        // al click della cella aggiungo la la classe
+        // al click della cella aggiungo la classe
         cell.addEventListener('click', function(){
             cell.classList.add('clicked');
             console.log(number)
             
-            let score = 0;
             
-            for (i = 0; i < cell.clientHeight; i++){
+            for (i = 0; i < cell.length; i++){
                
-                const clicked = document.querySelectorAll('clicked');
-
+                const clicked = document.querySelectorAll('.clicked');
+                score = clicked.length
+                console.log('FUNZIONA', score)
+                
+                scoreElement.innerText = clicked;
             }
 
-
-
-            scoreElement.innerText = score
         });
-
 
     }
     
