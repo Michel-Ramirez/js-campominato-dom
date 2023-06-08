@@ -1,0 +1,48 @@
+header {
+    height: 80px;
+}
+
+footer {
+    height: 80px;
+}
+
+main {
+    height: calc(100vh - 160px);
+    width: 100%;
+    background-color: aquamarine;
+}
+
+#grid {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cell.clicked {
+    background-color: blue;
+}
+
+.cell.level-10 {
+    flex-basis: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cell.level-9 {
+    flex-basis: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cell.level-7{
+    flex-basis: calc(100% / 7);
+    height: calc(100% / 7);
+}
