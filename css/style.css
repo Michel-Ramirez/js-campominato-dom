@@ -46,3 +46,7 @@ main {
     flex-basis: calc(100% / 7);
     height: calc(100% / 7);
 }
+
+.cell.clicked.bomb {
+    background-color: red;
+}
