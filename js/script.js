@@ -86,7 +86,7 @@ button.addEventListener ('click', function (){
             if (isBomb){
                 cell.classList.add('bomb');
                 setTimeout(() => {
-                    alert(`Hai erso totalizzando ${score}`);
+                    alert(`Hai perso totalizzando ${score}`);
                 }, 300);
             } else {
                 //aumento il punteggio man mano che clicco sulle celle
