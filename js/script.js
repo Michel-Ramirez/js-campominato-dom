@@ -8,7 +8,6 @@ const level = document.getElementById("level");
 const scoreElement = document.querySelector(".score");
 const gameOver = document.querySelector(".game-over");
 const finalScore = document.getElementById("final-score");
-const playAgain = document.getElementById("play-again");
 
 function playGame() {
   function createCell() {
@@ -98,11 +97,5 @@ function playGame() {
 //al click del bottone devo generare 100 celle
 button.addEventListener("click", function () {
   /**** | FUNCTIONS | *****/
-
-  playGame();
-});
-
-playAgain.addEventListener("click", function () {
-  gameOver.classList.add("v-hidden");
   playGame();
 });

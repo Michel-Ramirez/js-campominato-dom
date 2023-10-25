@@ -1,3 +1,7 @@
+body {
+    font-family: Carter One;
+}
+
 header {
     height: 80px;
 }
@@ -14,10 +18,17 @@ main {
 
 .play-game {
     width: 100%;
-    background-image: url(../img/boom_3.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+#grid img {
+    height: 100%;
+    height: 80%;
 }
 
 #grid,
@@ -87,18 +98,11 @@ main {
     padding-top: 20px;
 
     background-image: url(../img/boom.png);
-    justify-content: space-between;
-
-}
-
-.game-over,
-.game-over-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-@keyframes fadeIn {}
+}
 
 .game-over h2,
 .game-over p,
