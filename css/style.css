@@ -12,11 +12,22 @@ main {
     background-color: aquamarine;
 }
 
-#grid {
+.play-game {
+    width: 100%;
+    background-image: url(../img/boom_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#grid,
+.wrapper {
     width: 800px;
     height: 800px;
     margin: 0 auto;
     flex-wrap: wrap;
+    border: 2px solid black;
+    box-shadow: 0px 0px 15px 17px rgba(0, 0, 0, 0.1);
 }
 
 .cell {
@@ -42,11 +53,74 @@ main {
     height: calc(100% / 9);
 }
 
-.cell.level-7{
+.cell.level-7 {
     flex-basis: calc(100% / 7);
     height: calc(100% / 7);
 }
 
-.cell.clicked.bomb {
+.cell.cell.clicked.bomb {
+    background-image: url(../img/boom_3.png);
+}
+
+.cell.clicked.bomb,
+.game-over {
     background-color: red;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* GAME OVER */
+
+.wrapper {
+    position: relative;
+}
+
+.game-over {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 20px;
+
+    background-image: url(../img/boom.png);
+    justify-content: space-between;
+
+}
+
+.game-over,
+.game-over-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {}
+
+.game-over h2,
+.game-over p,
+#final-score {
+    font-family: Carter One;
+}
+
+.game-over h2 {
+    font-size: 5rem;
+    color: white;
+}
+
+.game-over p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#final-score {
+    color: white;
+    font-size: 4rem;
+}
+
+.v-hidden {
+    visibility: hidden;
 }
