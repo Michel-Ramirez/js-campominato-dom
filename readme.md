@@ -1,6 +1,6 @@
 # CAMPO MINATO
 
-#### PROVEDIMENTO
+#### PROCEDIMENTO
 
 - Recupero gli elementi dal dom
 - Metto in ascolto il bottone play
